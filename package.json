@@ -1,6 +1,11 @@
 {
 	"name": "portfolio-netlify",
+	"description": "A sveltekit portfolio project with typescript, husky, and storybook setup",
 	"version": "0.0.1",
+	"author": {
+		"name": "Noocktall Klown S.",
+		"url": "https://cloudlessv.netlify.app/"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -31,5 +36,8 @@
 		"typescript": "^4.7.4",
 		"vite": "^3.0.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"sanitize.css": "^13.0.0"
+	}
 }

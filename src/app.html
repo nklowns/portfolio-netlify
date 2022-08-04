@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-	</head>
-	<body>
-		<div>%sveltekit.body%</div>
-	</body>
+
+<head prefix="og: https://ogp.me/ns#">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+	<link rel="icon" href="/favicon.png" />
+	<link rel="manifest" crossorigin="use-credentials" href="/site.webmanifest" />
+	<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+	<link rel="canonical" href="https://cloudlessv.netlify.app/"/>
+
+	%sveltekit.head%
+</head>
+
+<body itemscope itemtype="https://schema.org/WebPage">
+	<div id="app">%sveltekit.body%</div>
+</body>
+
+<noscript>
+	<div>
+		<p> Please enable JavaScript to continue using this application. </p>
+	</div>
+</noscript>
+
 </html>
