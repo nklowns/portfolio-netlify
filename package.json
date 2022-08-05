@@ -7,6 +7,7 @@
 		"url": "https://cloudlessv.netlify.app/"
 	},
 	"scripts": {
+		"postinstall": "svelte-kit sync",
 		"dev": "vite dev",
 		"build": "vite build",
 		"package": "svelte-kit package",
