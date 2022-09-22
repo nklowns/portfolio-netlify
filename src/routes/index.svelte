@@ -11,22 +11,73 @@
 	<meta name="description" content="A sveltekit portfolio project with typescript" />
 </svelte:head>
 
-<section>
-	<h1>coming soon</h1>
+<main>
+	<nav>
+		<div class="nav-container">
+			<div></div>
+			<h2>@cloudlessv</h2>
+		</div>
+	</nav>
 
-	<h2>@cloudlessv</h2>
-</section>
+	<header>
+		<h2>@cloudlessv</h2>
+	</header>
+
+	<section>
+		<h1>coming soon</h1>
+	</section>
+</main>
 
 <style>
-	section {
-		width: 100vw;
-		height: 100vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+	main {
+		position: relative;
+		overflow: visible;
 
-		background: #151515;
-		color: #f4f4f4;
+		width: 100%;
+		min-height: 100%;
+		transform: none;
+
+		background: var(--surface1);
+		color: var(--text1);
+	}
+
+	nav {
+		position: sticky;
+		left: 0px;
+		top: 0px;
+		z-index: 1;
+
+		width: 100%;
+		height: min-content;
+		backdrop-filter: blur(10px);
+		background-color: rgba(0, 0, 0, 0.7);
+		will-change: transform;
+
+		flex: 0 0 auto;
+		flex-shrink: 0;
+		opacity: 1;
+		transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(0deg)
+			rotateX(0deg) rotateY(0deg) translateZ(0px);
+	}
+	.nav-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 30px 30px 30px 30px;
+		width: 100%;
+		height: auto;
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 60px;
+		padding: 0px 0px 0px 0px;
+
+		width: 100%;
+		height: auto;
 	}
 
 	section h1 {

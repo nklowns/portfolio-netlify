@@ -1,8 +1,9 @@
 {
-	"background_color": "#ffffff",
-	"theme_color": "#ffffff",
 	"name": "Portfolio @cloudlessv",
 	"short_name": "@cloudlessv",
+	"start_url": "/",
 	"display": "minimal-ui",
-	"start_url": "/"
+	"description": "A simply portfolio app.",
+	"background_color": "#dfdfec",
+	"theme_color": "#dfdfec"
 }

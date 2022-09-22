@@ -6,16 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
 	<link rel="icon" href="/favicon.png" />
-	<link rel="manifest" crossorigin="use-credentials" href="/site.webmanifest" />
 	<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+	<link rel="manifest" crossorigin="use-credentials" href="/site.webmanifest" />
+	<meta name="theme-color" content="#dfdfec" media="(prefers-color-scheme: light)" />
+	<meta name="theme-color" content="#17171c" media="(prefers-color-scheme: dark)" />
 
-	<link rel="canonical" href="https://cloudlessv.netlify.app/"/>
+	<link rel="canonical" href="https://cloudlessv.netlify.app/" />
 
 	%sveltekit.head%
 </head>
 
-<body itemscope itemtype="https://schema.org/WebPage">
-	<div id="app">%sveltekit.body%</div>
+<body id="app" itemscope itemtype="https://schema.org/WebPage">
+	%sveltekit.body%
 </body>
 
 <noscript>
