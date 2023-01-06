@@ -51,19 +51,30 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 0.5rem;
 
   &-image {
-    width: 12.5rem;
-    height: 12.5rem;
+    max-width: calc(12.5rem + 0.25rem);
+    max-height: calc(12.5rem + 0.25rem);
+    width: 100%;
     border-radius: 50%;
-    outline: 0.25rem solid;
+    border: 0.25rem solid;
   }
 
   &-content {
-    text-align: start;
+    text-align: center;
 
-    h2,
     p {
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+
+    * {
       margin: 0;
     }
   }
