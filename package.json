@@ -15,5 +15,20 @@
     "eslint-plugin-vue": "^9.8.0",
     "vite": "^4.0.4"
   },
-  "packageManager": "yarn@3.2.3"
+  "packageManager": "yarn@3.2.3",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "tests/e2e/specs",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "tests/e2e/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
 }

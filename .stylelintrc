@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "string-quotes": "single",
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["v-deep"]
+      }
+    ],
+    "selector-class-pattern": null
+  },
+  "extends": [
+    "stylelint-config-recommended-vue/scss"
+  ]
+}

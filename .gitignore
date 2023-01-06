@@ -23,6 +23,7 @@ dist-ssr
 coverage
 *.local
 
+/tests/e2e/cucumber-json/
 /cypress/videos/
 /cypress/screenshots/
 
