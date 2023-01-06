@@ -4,12 +4,25 @@
     "selector-pseudo-element-no-unknown": [
       true,
       {
-        "ignorePseudoElements": ["v-deep"]
+        "ignorePseudoElements": [
+          "v-deep"
+        ]
       }
     ],
     "selector-class-pattern": null
   },
   "extends": [
-    "stylelint-config-recommended-vue/scss"
+    "stylelint-config-recommended-vue/scss",
+    "stylelint-config-prettier"
+  ],
+  "customSyntax": "postcss-html",
+  "overrides": [
+    {
+      "files": [
+        "*.scss",
+        "**/*.scss"
+      ],
+      "customSyntax": "postcss-scss"
+    }
   ]
 }

@@ -1,10 +1,9 @@
 const { defineConfig } = require('cypress')
-require('dotenv').config()
 
 module.exports = defineConfig({
   env: {
-    baseURL: process.env.VUE_APP_API_BASE_URL,
-    apiTestToken: process.env.VUE_APP_API_TEST_TOKEN,
+    baseURL: import.meta.env.VITE_API_BASE_URL,
+    apiTestToken: import.meta.env.VITE_API_TEST_TOKEN,
   },
   projectId: '',
   chromeWebSecurity: false,

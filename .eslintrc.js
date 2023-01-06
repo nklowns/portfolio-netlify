@@ -1,8 +1,4 @@
-const isProduction = process.env.NODE_ENV === 'production'
-const errorOnProduction = isProduction ? 'error' : 'off'
-
-const isStaging = process.env.NODE_ENV === 'staging'
-const errorOnStaging = isProduction || isStaging ? 'error' : 'off'
+const switchErrorOrOff = value => (value ? 'error' : 'off')
 
 module.exports = {
   root: true,
@@ -15,18 +11,28 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:storybook/recommended',
   ],
+  parser: 'vue-eslint-parser',
   parserOptions: {
-    parser: '@babel/eslint-parser',
+    parser: {
+      js: '@babel/eslint-parser',
+      '<template>': 'espree',
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    requireConfigFile: false,
   },
   rules: {
-    'no-console': errorOnProduction,
+    'no-console': switchErrorOrOff(process.env.NODE_ENV === 'production'),
     // allow async-await
     'no-global-assign': 'error',
     'generator-star-spacing': 'off',
     'no-var': 'error',
     semi: 'off',
     // allow debugger during development
-    'no-debugger': errorOnStaging,
+    'no-debugger': switchErrorOrOff(
+      process.env.NODE_ENV === 'production' ||
+        process.env.NODE_ENV === 'staging'
+    ),
   },
   globals: {
     jest: 'readonly',
