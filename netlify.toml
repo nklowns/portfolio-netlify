@@ -1,4 +1,9 @@
 [[redirects]]
+from = '/storybook/*'
+to = '/storybook/:splat'
+force = true
+
+[[redirects]]
 from = '/api/*'
 to = '/.netlify/functions/:splat'
 status = 200
