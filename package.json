@@ -4,7 +4,7 @@
   "scripts": {
     "netlify": "netlify dev",
     "build": "run build-vite && run build-storybook",
-    "dev": "vite",
+    "serve": "vite",
     "build-vite": "vite build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -o dist/storybook",

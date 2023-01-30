@@ -1,11 +1,11 @@
+<script setup>
+import DashboardPage from '@/views/DashboardPage/DashboardPage.vue'
+</script>
+
 <template>
   <v-app>
     <v-main>
-      <HelloWorld />
+      <DashboardPage />
     </v-main>
   </v-app>
 </template>
-
-<script setup>
-import HelloWorld from '@/components/HelloWorld/HelloWorld.vue'
-</script>
