@@ -1976,6 +1976,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdi/font@npm:^7.2.96":
+  version: 7.2.96
+  resolution: "@mdi/font@npm:7.2.96"
+  checksum: f193bb99175e723864a7fd4010594637395a77c8011668f65856aa65abd70848239ab8642fe8aabb0f57f0ffe513a32687fddcd1a927f5aa6c7329b8d8c13e75
+  languageName: node
+  linkType: hard
+
 "@mdx-js/react@npm:^2.1.5":
   version: 2.2.1
   resolution: "@mdx-js/react@npm:2.2.1"
@@ -7769,6 +7776,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"maska@npm:^2.1.7":
+  version: 2.1.7
+  resolution: "maska@npm:2.1.7"
+  checksum: eaeb4d8fca370cabf124a58d022adc07e03e735b27d57229fee82100a4f0f32c1a3e0fe366ff2a42836f610b817dc057442e01dff7ae2a1e2bcd2e5de4514030
+  languageName: node
+  linkType: hard
+
 "mathml-tag-names@npm:^2.1.3":
   version: 2.1.3
   resolution: "mathml-tag-names@npm:2.1.3"
@@ -8682,6 +8696,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.20.12
     "@babel/eslint-parser": ^7.19.1
+    "@mdi/font": ^7.2.96
     "@storybook/addon-essentials": 7.0.0-beta.36
     "@storybook/addon-interactions": 7.0.0-beta.36
     "@storybook/addon-links": 7.0.0-beta.36
@@ -8700,6 +8715,7 @@ __metadata:
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-storybook: ^0.6.10
     eslint-plugin-vue: ^9.9.0
+    maska: ^2.1.7
     postcss: ^8.4.21
     postcss-html: ^1.5.0
     postcss-scss: ^4.0.6

@@ -1,5 +1,6 @@
 <script>
 import ProfileSample from '@/components/ProfileSample/ProfileSample.vue'
+import cloudlessv from '@/assets/cloudlessv-profile.webp'
 
 export default {
   name: 'DashboardPage',
@@ -9,8 +10,7 @@ export default {
   data() {
     return {
       profile: {
-        image:
-          'https://media.licdn.com/dms/image/D4D03AQHet1Vutm4voQ/profile-displayphoto-shrink_400_400/0/1672851650608?e=1678320000&v=beta&t=T0lwIQk3YPP_UhUCA3jNoYE9DrKUELb37u15IGeXrx4',
+        image: cloudlessv,
         name: 'Cloudless Lourenço',
         details: {
           title:

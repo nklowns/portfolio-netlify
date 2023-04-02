@@ -16,6 +16,7 @@ export default {
         class="profile-image u-photo"
         :src="profile.image"
         alt="@cloudlessv portrait"
+        cover
       />
     </v-avatar>
 
