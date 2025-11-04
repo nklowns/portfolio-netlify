@@ -71,7 +71,8 @@ Análise completa e atualização do repositório `portfolio-netlify` para as ve
 ```
 
 #### Security Headers Implementados
-- **X-Frame-Options**: DENY (previne clickjacking)
+- **X-Frame-Options**: DENY para app principal (previne clickjacking)
+- **X-Frame-Options**: SAMEORIGIN para Storybook (permite preview de componentes em iframe)
 - **X-Content-Type-Options**: nosniff (previne MIME sniffing)
 - **X-XSS-Protection**: 1; mode=block (proteção XSS)
 - **Referrer-Policy**: strict-origin-when-cross-origin

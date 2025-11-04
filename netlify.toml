@@ -30,7 +30,17 @@
   to = "/index.html"
   status = 200
 
-# Security headers
+# Security headers for Storybook (allows frames for component preview)
+[[headers]]
+  for = "/storybook/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Security headers for main app
 [[headers]]
   for = "/*"
   [headers.values]
