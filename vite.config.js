@@ -8,6 +8,22 @@ import vuetify from 'vite-plugin-vuetify'
 export default defineConfig({
   build: {
     outDir: 'dist',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['vue'],
+          vuetify: ['vuetify'],
+        },
+      },
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+      },
+    },
   },
   plugins: [
     vue(),
