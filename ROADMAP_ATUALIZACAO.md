@@ -8,14 +8,14 @@ Este documento descreve as atualizações realizadas no projeto portfolio-netlif
 
 ### Core Dependencies
 - **Vue.js**: 3.2.45 → **3.4.19** (versão estável mais recente)
-- **Vite**: 4.0.4 → **5.4.21** (major update com melhorias de performance)
+- **Vite**: 4.0.4 → **5.4.11** (major update com melhorias de performance)
 - **Vuetify**: 3.1.0 → **3.7.3** (correções e novos componentes)
 
 ### Build & Development Tools
 - **Storybook**: 7.0.0-beta.36 → **7.6.20** (versão estável LTS, v8+ tem problemas com Yarn PnP)
 - **ESLint**: 8.33.0 → **9.15.0** (suporte ao novo Flat Config)
 - **Prettier**: 2.8.3 → **3.4.1** (melhorias de formatação)
-- **Stylelint**: 14.16.1 → **16.25.0** (major update)
+- **Stylelint**: 14.16.1 → **16.11.0** (major update)
 - **Sass**: 1.57.1 → **1.81.0** (suporte à nova API)
 
 ### Outros Pacotes
