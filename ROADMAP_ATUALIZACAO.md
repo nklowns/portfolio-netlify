@@ -169,14 +169,13 @@ yarn netlify             # Inicia Netlify Dev (local)
 ## 🔐 9. Segurança
 
 Headers de segurança implementados:
-- `X-Frame-Options: DENY` - Previne clickjacking (app principal)
-- `X-Frame-Options: SAMEORIGIN` - Permite frames no Storybook (necessário para preview de componentes)
+- `X-Frame-Options: SAMEORIGIN` - Permite frames da mesma origem (necessário para Storybook funcionar)
 - `X-Content-Type-Options: nosniff` - Previne MIME sniffing
 - `X-XSS-Protection: 1; mode=block` - Proteção contra XSS
 - `Referrer-Policy: strict-origin-when-cross-origin` - Controla referrer
 - `Permissions-Policy` - Desabilita APIs desnecessárias
 
-**Nota**: O Storybook usa `X-Frame-Options: SAMEORIGIN` ao invés de `DENY` porque precisa exibir componentes em iframes para o preview visual.
+**Nota**: O site usa `X-Frame-Options: SAMEORIGIN` que previne que sites externos incorporem o app em iframes, mas permite que o próprio Storybook exiba componentes em iframes para preview. Esta configuração oferece boa proteção contra clickjacking enquanto mantém a funcionalidade do Storybook.
 
 ## ✅ 10. Conclusão
 
