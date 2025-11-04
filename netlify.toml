@@ -1,28 +1,70 @@
-[[redirects]]
-from = '/storybook/*'
-to = '/storybook/:splat'
-force = true
+# Netlify Configuration - Updated with 2024 Best Practices
 
-[[redirects]]
-from = '/api/*'
-to = '/.netlify/functions/:splat'
-status = 200
-force = true
-
-[[redirects]]
-from = '/*'
-to = '/index.html'
-status = 200
-
-[[headers]]
-for = "/manifest.webmanifest"
-[headers.values]
-Content-Type = "application/manifest+json"
-
+# Build settings
 [build]
-command = "yarn run build"
-publish = "dist"
+  command = "yarn run build"
+  publish = "dist"
 
+# Development server settings
 [dev]
-autoLaunch = false
-functionsPort = 8885
+  autoLaunch = false
+  functionsPort = 8885
+  port = 3000
+
+# Redirect rules for SPA routing
+[[redirects]]
+  from = "/storybook/*"
+  to = "/storybook/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+
+# Fallback for client-side routing (SPA)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security headers for Storybook (allows frames for component preview)
+[[headers]]
+  for = "/storybook/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Security headers for main app (SAMEORIGIN allows Storybook to embed app for previews)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Manifest file headers
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+# Cache control for static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache control for service worker
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+

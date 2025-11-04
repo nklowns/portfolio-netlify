@@ -1,0 +1,11 @@
+# Netlify Redirects for SPA
+# This ensures client-side routing works properly
+
+# Storybook routing
+/storybook/*  /storybook/:splat  200
+
+# API functions
+/api/*  /.netlify/functions/:splat  200
+
+# Fallback for all other routes (SPA)
+/*  /index.html  200
