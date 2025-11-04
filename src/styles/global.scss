@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-@import 'vendors/sanatizer';
+@use 'vendors/sanatizer';
 
 body {
   min-width: 100vw;
