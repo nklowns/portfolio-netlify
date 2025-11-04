@@ -12,7 +12,7 @@ Este documento descreve as atualizações realizadas no projeto portfolio-netlif
 - **Vuetify**: 3.1.0 → **3.7.3** (correções e novos componentes)
 
 ### Build & Development Tools
-- **Storybook**: 7.0.0-beta.36 → **8.4.2** (versão estável, saiu do beta)
+- **Storybook**: 7.0.0-beta.36 → **7.6.20** (versão estável LTS, v8+ tem problemas com Yarn PnP)
 - **ESLint**: 8.33.0 → **9.15.0** (suporte ao novo Flat Config)
 - **Prettier**: 2.8.3 → **3.4.1** (melhorias de formatação)
 - **Stylelint**: 14.16.1 → **16.25.0** (major update)
@@ -100,6 +100,11 @@ Alguns avisos de peer dependencies são esperados:
 - ⚠️ Os arquivos SCSS ainda usam `@import`
 - 📝 Recomendação futura: migrar para `@use` e `@forward`
 - 🔗 [Sass Module System](https://sass-lang.com/documentation/at-rules/use)
+
+### Storybook e Yarn PnP
+- ⚠️ Storybook tem incompatibilidades conhecidas com Yarn PnP
+- 📝 Solução: Usar `nodeLinker: node-modules` no `.yarnrc.yml`
+- 🔗 Ver arquivo `KNOWN_ISSUES.md` para mais detalhes
 
 ## 🛠️ 6. Como Usar
 
